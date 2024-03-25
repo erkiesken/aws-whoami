@@ -1,0 +1,14 @@
+{
+  "name": "aws-whoami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "whoami.js",
+  "scripts": {
+    "whoami": "node --no-warnings whoami.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1583.0"
+  }
+}
