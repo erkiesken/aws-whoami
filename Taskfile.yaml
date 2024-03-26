@@ -1,0 +1,31 @@
+version: "3"
+
+tasks:
+
+  default:
+    ignore_error: true
+    cmds:
+      - task: go-whoami
+      - task: node-aws-whoami-v2
+      - task: node-aws-whoami-v3
+
+  go-whoami:
+    desc: "Running STS GetCallerIdentity with aws-sdk-go-v2"
+    dir: go-aws-whoami
+    cmds:
+      - "go mod download"
+      - "go run ."
+
+  node-aws-whoami-v2:
+    desc: "Running STS GetCallerIdentity with NPM aws-sdk v2"
+    dir: node-aws-whoami-v2
+    cmds:
+      - "test -d node_modules || npm install"
+      - "npm run whoami"
+
+  node-aws-whoami-v3:
+    desc: "Running STS GetCallerIdentity with NPM @aws-sdk/* v3"
+    dir: node-aws-whoami-v3
+    cmds:
+      - "test -d node_modules || npm install"
+      - "npm run whoami"
