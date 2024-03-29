@@ -6,9 +6,16 @@ tasks:
   default:
     ignore_error: true
     cmds:
+      - task: aws-cli
       - task: go-whoami
       - task: node-aws-whoami-v2
       - task: node-aws-whoami-v3
+
+  aws-cli:
+    desc: "Running STS GetCallerIdentity with aws-cli"
+    cmds:
+      - >
+        aws sts get-caller-identity | jq -r '"+++ AWS whoami +++\nUser ID: "+.UserId+"\nAccount: "+.Account+"\nARN: "+.Arn+"\n"'
 
   go-whoami:
     desc: "Running STS GetCallerIdentity with aws-sdk-go-v2"

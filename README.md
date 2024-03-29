@@ -7,7 +7,7 @@ This tool is useful to check multi-profile `~/.aws/config` file with differing (
 
 ## Usage
 
-Currently there are 3 implementations, with [AWS Go SDK](https://aws.amazon.com/sdk-for-go/), NPM [aws-sdk v2](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html) and NPM [aws-sdk v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html).
+Currently there are 4 implementations, with [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html), [AWS Go SDK](https://aws.amazon.com/sdk-for-go/), NPM [aws-sdk v2](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html) and NPM [aws-sdk v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html).
 
 To run all of these use [Taskfile](https://taskfile.dev) tool and run `task default`. To see all options and to run specific case use `task --list`.
 
