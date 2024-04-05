@@ -7,14 +7,25 @@ This tool is useful to check multi-profile `~/.aws/config` file with differing (
 
 ## Usage
 
-Currently there are 4 implementations, with [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html), [AWS Go SDK](https://aws.amazon.com/sdk-for-go/), NPM [aws-sdk v2](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html) and NPM [aws-sdk v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html).
+Currently there are 4 implementations:
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html)
+* Golang with [AWS SDK for Go V2](https://aws.amazon.com/sdk-for-go/) (`github.com/aws/aws-sdk-go-v2`)
+* Node.js with [AWS SDK for JavaScript V2](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html) (`aws-sdk`)
+* Node.js with [AWS SDK for JavaScript V3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html) (`@aws-sdk/*`)
 
-To run all of these use [Taskfile](https://taskfile.dev) tool and run `task default`. To see all options and to run specific case use `task --list`.
+To install all needed dependencies and run the tasks you can use [Mise](https://mise.jdx.dev/about.html) tool and run `mise install` and `mise tasks run all`.
+
+Alternatively if you have all the dependencies installed, then you can also use [Taskfile](https://taskfile.dev) tool and run `task all`. To see all options and to run specific case use `task --list`.
 
 Expected output is something like this:
 
 ```
-$ task default
+## Run with Mise:
+# $ mise install
+# $ mise tasks run all
+
+## Run with Taskfile:
+$ task all
 
 task: [go-whoami] go mod download
 task: [go-whoami] go run .

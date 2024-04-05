@@ -1,0 +1,49 @@
+[tools]
+awscli = "latest"
+go = "latest"
+node = "lts"
+jq = "latest"
+
+# List tasks with:
+#   mise tasks ls
+# Run all tasks with:
+#   mise tasks run all --jobs 1
+
+[tasks.all]
+description = "Run all whoami variants"
+depends = ["deps:*", "whoami:*"]
+
+[tasks."deps:go-whoami"]
+description = "Download go dependencies"
+dir = "./go-aws-whoami"
+run = "go mod download"
+
+[tasks."deps:node-v2"]
+description = "Download npm dependencies"
+dir = "./node-aws-whoami-v2"
+run = "test -d node_modules || npm install"
+
+[tasks."deps:node-v3"]
+description = "Download npm dependencies"
+dir = "./node-aws-whoami-v3"
+run = "test -d node_modules || npm install"
+
+[tasks."whoami:cli"]
+description = "Use aws-cli to run STS GetCallerIdentity"
+dir = "./aws-cli"
+run = "./whoami.sh"
+
+[tasks."whoami:go"]
+description = "Use aws-sdk-go-v2 to run STS GetCallerIdentity"
+dir = "./go-aws-whoami"
+run = "go run ."
+
+[tasks."whoami:node-v2"]
+description = "Use NPM aws-sdk v2 to run STS GetCallerIdentity"
+dir = "./node-aws-whoami-v2"
+run = "npm run whoami"
+
+[tasks."whoami:node-v3"]
+description = "Use NPM @aws-sdk/* v3 to run STS GetCallerIdentity"
+dir = "./node-aws-whoami-v3"
+run = "npm run whoami"
