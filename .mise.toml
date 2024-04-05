@@ -3,6 +3,7 @@ awscli = "latest"
 go = "latest"
 node = "lts"
 jq = "latest"
+task = "latest"
 
 # List tasks with:
 #   mise tasks ls
