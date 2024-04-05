@@ -13,9 +13,9 @@ tasks:
 
   aws-cli:
     desc: "Running STS GetCallerIdentity with aws-cli"
+    dir: "aws-cli"
     cmds:
-      - >
-        aws sts get-caller-identity | jq -r '"+++ AWS whoami +++\nUser ID: "+.UserId+"\nAccount: "+.Account+"\nARN: "+.Arn+"\n"'
+      - "./whoami.sh"
 
   go-whoami:
     desc: "Running STS GetCallerIdentity with aws-sdk-go-v2"
