@@ -12,6 +12,7 @@ Currently there are 4 implementations:
 * Golang with [AWS SDK for Go V2](https://aws.amazon.com/sdk-for-go/) (`github.com/aws/aws-sdk-go-v2`)
 * Node.js with [AWS SDK for JavaScript V2](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html) (`aws-sdk`)
 * Node.js with [AWS SDK for JavaScript V3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html) (`@aws-sdk/*`)
+* Python3 with [boto3 library](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sts.html)
 
 To install all needed dependencies and run the tasks you can use [Mise](https://mise.jdx.dev/about.html) tool and run `mise install` and `mise tasks run all`.
 

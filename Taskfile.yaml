@@ -15,6 +15,7 @@ tasks:
       - task: go-whoami
       - task: node-aws-whoami-v2
       - task: node-aws-whoami-v3
+      - task: py3-aws-whoami
 
   aws-cli:
     desc: "Running STS GetCallerIdentity with aws-cli"
@@ -42,3 +43,9 @@ tasks:
     cmds:
       - "test -d node_modules || npm install"
       - "npm run whoami"
+
+  py3-aws-whoami:
+    desc: "Running STS GetCallerIdentity with Boto3"
+    dir: "py3-aws-whoami"
+    cmds:
+      - "./run.sh"

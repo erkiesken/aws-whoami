@@ -48,3 +48,8 @@ run = "npm run whoami"
 description = "Use NPM @aws-sdk/* v3 to run STS GetCallerIdentity"
 dir = "./node-aws-whoami-v3"
 run = "npm run whoami"
+
+[tasks."whoami:py3"]
+description = "Use boto3 to run STS GetCallerIdentity"
+dir = "./py3-aws-whoami"
+run = "./run.sh"
