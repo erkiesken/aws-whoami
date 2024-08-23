@@ -53,3 +53,8 @@ run = "npm run whoami"
 description = "Use boto3 to run STS GetCallerIdentity"
 dir = "./py3-aws-whoami"
 run = "./run.sh"
+
+[tasks."whoami:rust"]
+description = "Use Rust to run STS GetCallerIdentity"
+dir = "./rust-aws-whoami"
+run = "./run.sh"

@@ -16,6 +16,7 @@ tasks:
       - task: node-aws-whoami-v2
       - task: node-aws-whoami-v3
       - task: py3-aws-whoami
+      - task: rust-aws-whoami
 
   aws-cli:
     desc: "Running STS GetCallerIdentity with aws-cli"
@@ -47,5 +48,11 @@ tasks:
   py3-aws-whoami:
     desc: "Running STS GetCallerIdentity with Boto3"
     dir: "py3-aws-whoami"
+    cmds:
+      - "./run.sh"
+
+  rust-aws-whoami:
+    desc: "Running STS GetCallerIdentity with AWS Rust SDK"
+    dir: "rust-aws-whoami"
     cmds:
       - "./run.sh"
