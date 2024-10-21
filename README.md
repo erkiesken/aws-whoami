@@ -7,7 +7,7 @@ This tool is useful to check multi-profile `~/.aws/config` file with differing (
 
 ## Usage
 
-Currently there are 4 implementations:
+Currently there are these implementations:
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html)
 * Golang with [AWS SDK for Go V2](https://aws.amazon.com/sdk-for-go/) (`github.com/aws/aws-sdk-go-v2`)
 * Node.js with [AWS SDK for JavaScript V2](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html) (`aws-sdk`)
